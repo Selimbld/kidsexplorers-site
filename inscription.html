@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscription – Kids Explorers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <img src="logo.png" alt="Logo Kids Explorers" class="logo" />
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="stages.html">Stages</a>
+      <a href="parascolaire.html">Parascolaire</a>
+      <a href="anniversaire.html">Anniversaire</a>
+      <a href="extrascolaire.html">Extrascolaire</a>
+      <a href="infos.html">Infos</a>
+      <a href="contact.html">Nous contacter</a>
+      <a href="login.html" class="cta">My KidsExplorers</a>
+    </nav>
+    <img src="martin.png" alt="Martin" class="martin" />
+  </header>
+
+  <main class="main">
+    <h1>Créer un compte parent 👨‍👩‍👧‍👦</h1>
+
+    <form action="enregistrer_inscription.php" method="POST" class="form-box">
+      <fieldset>
+        <legend>Informations du parent</legend>
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" required />
+
+        <label for="prenom">Prénom *</label>
+        <input type="text" id="prenom" name="prenom" required />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="username">Nom d'utilisateur *</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Mot de passe *</label>
+        <input type="password" id="password" name="password" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Enfant 1</legend>
+        <label for="enfant1_nom">Nom *</label>
+        <input type="text" id="enfant1_nom" name="enfant1_nom" required />
+
+        <label for="enfant1_prenom">Prénom *</label>
+        <input type="text" id="enfant1_prenom" name="enfant1_prenom" required />
+
+        <label for="enfant1_naissance">Date de naissance *</label>
+        <input type="date" id="enfant1_naissance" name="enfant1_naissance" required />
+
+        <label for="enfant1_ecole">École *</label>
+        <input type="text" id="enfant1_ecole" name="enfant1_ecole" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Enfant 2 (facultatif)</legend>
+        <label for="enfant2_nom">Nom</label>
+        <input type="text" id="enfant2_nom" name="enfant2_nom" />
+
+        <label for="enfant2_prenom">Prénom</label>
+        <input type="text" id="enfant2_prenom" name="enfant2_prenom" />
+
+        <label for="enfant2_naissance">Date de naissance</label>
+        <input type="date" id="enfant2_naissance" name="enfant2_naissance" />
+
+        <label for="enfant2_ecole">École</label>
+        <input type="text" id="enfant2_ecole" name="enfant2_ecole" />
+      </fieldset>
+
+      <button type="submit" class="button">S'inscrire</button>
+    </form>
+
+    <p style="margin-top: 20px;">Déjà un compte ? <a href="login.html">Se connecter ici</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>Adresse :</strong> 143 avenue Dolez, 1080 Uccle</p>
+      <p><strong>Email :</strong> <a href="mailto:info@kidsexplorers.be">info@kidsexplorers.be</a></p>
+      <p><strong>WhatsApp :</strong> <a href="tel:+32489785654">0489 78 56 54</a></p>
+      <p><strong>Instagram :</strong> <a href="https://www.instagram.com/kids_explorers1" target="_blank">@kids_explorers1</a></p>
+    </div>
+    <p class="copyright">© Tous droits réservés – Kids Explorers</p>
+  </footer>
+
+</body>
+</html>

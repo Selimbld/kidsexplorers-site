@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion – Kids Explorers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <img src="logo.png" alt="Logo Kids Explorers" class="logo" />
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="stages.html">Stages</a>
+      <a href="parascolaire.html">Parascolaire</a>
+      <a href="anniversaire.html">Anniversaire</a>
+      <a href="extrascolaire.html">Extrascolaire</a>
+      <a href="infos.html">Infos</a>
+      <a href="contact.html">Nous contacter</a>
+      <a href="login.html" class="cta">My KidsExplorers</a>
+    </nav>
+    <img src="martin.png" alt="Martin" class="martin" />
+  </header>
+
+  <main class="main">
+    <h1>Connexion au compte parent 🔐</h1>
+
+    <form action="verifier_connexion.php" method="POST" class="form-box">
+      <label for="username">Nom d'utilisateur *</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Mot de passe *</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" class="button">Se connecter</button>
+    </form>
+
+    <p style="margin-top: 20px;">Pas encore de compte ? <a href="inscription.html">S'inscrire ici</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>Adresse :</strong> 143 avenue Dolez, 1080 Uccle</p>
+      <p><strong>Email :</strong> <a href="mailto:info@kidsexplorers.be">info@kidsexplorers.be</a></p>
+      <p><strong>WhatsApp :</strong> <a href="tel:+32489785654">0489 78 56 54</a></p>
+      <p><strong>Instagram :</strong> <a href="https://www.instagram.com/kids_explorers1" target="_blank">@kids_explorers1</a></p>
+    </div>
+    <p class="copyright">© Tous droits réservés – Kids Explorers</p>
+  </footer>
+
+</body>
+</html>

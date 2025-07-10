@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscription Stage – Kids Explorers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .stage-option,
+    .activity-option {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .stage-option:hover,
+    .activity-option:hover {
+      background: #f0f0f0;
+    }
+
+    .stage-option img,
+    .activity-option img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="logo.png" alt="Logo Kids Explorers" class="logo" />
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="stages.html">Stages</a>
+      <a href="parascolaire.html">Parascolaire</a>
+      <a href="anniversaire.html">Anniversaire</a>
+      <a href="extrascolaire.html">Extrascolaire</a>
+      <a href="infos.html">Infos</a>
+      <a href="contact.html">Nous contacter</a>
+      <a href="login.html" class="cta">My KidsExplorers</a>
+    </nav>
+    <img src="martin.png" alt="Martin la mascotte" class="martin" />
+  </header>
+
+  <main class="main">
+    <h1>Inscription aux stages</h1>
+    <p>Choisissez une tranche d'âge pour commencer 👇</p>
+
+    <!-- Choix tranche d'âge -->
+    <div class="stage-option" onclick="selectStage('3-5')">
+      <img src="stage3-5.jpg" alt="Stage 3-5 ans">
+      <div>
+        <strong>Stage Willemijns 3–5 ans</strong>
+      </div>
+    </div>
+
+    <div class="stage-option" onclick="selectStage('6-12')">
+      <img src="stage6-12.jpg" alt="Stage 6-12 ans">
+      <div>
+        <strong>Stage Willemijns 6–12 ans</strong>
+      </div>
+    </div>
+
+    <!-- Activités 3–5 ans -->
+    <div id="activities-3-5" class="hidden" style="margin-top: 30px;">
+      <h2>Activité du matin</h2>
+      <div class="activity-option" onclick="selectActivity(this, 30)">
+        <img src="foot.jpg" alt="Mini foot">
+        <div>Mini foot (+30 €)</div>
+      </div>
+      <div class="activity-option" onclick="selectActivity(this, 0)">
+        <img src="kidsfun.jpg" alt="Kids Fun">
+        <div>Kids Fun</div>
+      </div>
+
+      <h2 style="margin-top: 20px;">Activité de l'après-midi</h2>
+      <div class="activity-option" onclick="selectActivity(this, 30)">
+        <img src="velo.jpg" alt="Vélo">
+        <div>Vélo (+30 €)</div>
+      </div>
+      <div class="activity-option" onclick="selectActivity(this, 0)">
+        <img src="kidsfun.jpg" alt="Kids Fun">
+        <div>Kids Fun</div>
+      </div>
+    </div>
+
+    <!-- Activités 6–12 ans -->
+    <div id="activities-6-12" class="hidden" style="margin-top: 30px;">
+      <h2>Activité du matin</h2>
+      <div class="activity-option" onclick="selectActivity(this, 30)">
+        <img src="foot.jpg" alt="Mini foot">
+        <div>Mini foot (+30 €)</div>
+      </div>
+      <div class="activity-option" onclick="selectActivity(this, 0)">
+        <img src="kidsfun.jpg" alt="Kids Fun">
+        <div>Kids Fun</div>
+      </div>
+
+      <h2 style="margin-top: 20px;">Activité de l'après-midi</h2>
+      <div class="activity-option" onclick="selectActivity(this, 30)">
+        <img src="velo.jpg" alt="Vélo">
+        <div>Vélo (+30 €)</div>
+      </div>
+      <div class="activity-option" onclick="selectActivity(this, 0)">
+        <img src="kidsfun.jpg" alt="Kids Fun">
+        <div>Kids Fun</div>
+      </div>
+    </div>
+
+    <!-- Prix total -->
+    <div class="price" id="price">Prix total : 120 €</div>
+
+    <!-- Bouton continuer -->
+    <a href="formulaire.html" class="button">Continuer</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>Adresse :</strong> 143 avenue Dolez, 1080 Uccle</p>
+      <p><strong>Email :</strong> <a href="mailto:info@kidsexplorers.be">info@kidsexplorers.be</a></p>
+      <p><strong>WhatsApp :</strong> <a href="tel:+32489785654">0489 78 56 54</a></p>
+      <p><strong>Instagram :</strong> <a href="https://www.instagram.com/kids_explorers1" target="_blank">@kids_explorers1</a></p>
+    </div>
+    <p class="copyright">© Tous droits réservés – Kids Explorers</p>
+  </footer>
+
+  <script>
+    let total = 120;
+    const priceDisplay = document.getElementById("price");
+
+    function selectStage(age) {
+      document.getElementById("activities-3-5").classList.add("hidden");
+      document.getElementById("activities-6-12").classList.add("hidden");
+      document.getElementById("activities-" + age).classList.remove("hidden");
+      total = 120;
+      priceDisplay.innerText = "Prix total : " + total + " €";
+    }
+
+    function selectActivity(el, supplement) {
+      if (!el.classList.contains("selected")) {
+        // Deselect siblings in the same section
+        const group = el.parentElement.querySelectorAll('.activity-option');
+        group.forEach(opt => {
+          if (opt.classList.contains('selected')) {
+            const value = parseInt(opt.getAttribute('data-supp') || 0);
+            total -= value;
+            opt.classList.remove('selected');
+          }
+        });
+        el.classList.add("selected");
+        el.setAttribute('data-supp', supplement);
+        total += supplement;
+        priceDisplay.innerText = "Prix total : " + total + " €";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactez-nous | Kids Explorers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f0fff0;
+      border-left: 5px solid #29b14a;
+      border-radius: 8px;
+    }
+
+    .contact-container h1 {
+      color: #ed6198;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      font-size: 18px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-item img.icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .qr-section {
+      margin-top: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border: 2px dashed #29b14a;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .qr-section img {
+      width: 200px;
+      margin: 20px 0;
+    }
+
+    .qr-section p {
+      font-size: 16px;
+    }
+
+    .qr-section a {
+      color: #29b14a;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER ici si tu en as un -->
+
+  <section class="contact-container">
+    <h1>Contactez-nous</h1>
+
+    <div class="contact-item">
+      📧 <span style="margin-left: 10px;">info@kidsexplorers.be</span>
+    </div>
+
+    <div class="contact-item">
+      📞 <span style="margin-left: 10px;">+32 (0)489 78 56 54</span>
+    </div>
+
+    <div class="contact-item">
+      📞 <span style="margin-left: 10px;">+32 (0)492 56 73 04</span>
+    </div>
+
+    <div class="qr-section">
+      <h2>Rejoignez-nous sur WhatsApp !</h2>
+      <p>Scannez le QR-code et restez informé de tous nos événements à venir 👇</p>
+      <img src="images/qr-whatsapp.png" alt="QR WhatsApp Kids Explorers">
+      <p><a href="https://whatsapp.com/channel/0029VawmpZ64Y9ljPlv5rW0k" target="_blank">Accéder à notre chaîne WhatsApp</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER ici si tu en as un -->
+
+</body>
+</html>
